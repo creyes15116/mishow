@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:label="MiShow">
+        <activity
+            android:name="com.xiaomi.miwear.mishow.MiShowMainActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <receiver
+            android:name="com.xiaomi.miwear.mishow.broadcast.MiShowAlarmReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.action.xiaomi.MiShowStart" />
+                <action android:name="com.action.xiaomi.MiShowStop" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
